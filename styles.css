@@ -1,0 +1,79 @@
+:root {
+  --bg: #f5f7fb;
+  --card: #ffffff;
+  --text: #1f2937;
+  --muted: #6b7280;
+  --primary: #2f6fed;
+  --accent: #ecf2ff;
+  --danger: #b42318;
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: Inter, system-ui, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+}
+header {
+  background: linear-gradient(110deg, #1f4db8, #2f6fed);
+  color: white;
+  padding: 1rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+main { max-width: 1200px; margin: 1.5rem auto; padding: 0 1rem; }
+.card {
+  background: var(--card);
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(17, 24, 39, 0.08);
+  padding: 1rem;
+}
+.hidden { display: none; }
+.stack { display: grid; gap: .6rem; }
+.auth-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px,1fr)); gap: 1rem; }
+input, select, textarea, button {
+  width: 100%;
+  padding: .55rem .65rem;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+}
+button {
+  cursor: pointer;
+  background: var(--primary);
+  color: white;
+  border: none;
+}
+button.secondary { background: #4b5563; }
+button.danger { background: var(--danger); }
+#tabs {
+  display: flex;
+  gap: .5rem;
+  flex-wrap: wrap;
+  margin-bottom: .8rem;
+}
+.tab-btn {
+  width: auto;
+  padding: .5rem .85rem;
+  background: #dbe5ff;
+  color: #12317f;
+}
+.tab-btn.active { background: var(--primary); color: #fff; }
+.grid-2 { display: grid; grid-template-columns: repeat(auto-fit,minmax(260px,1fr)); gap: 1rem; }
+.item {
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: .75rem;
+  background: #fff;
+}
+.item h4 { margin: 0 0 .35rem; }
+.small { color: var(--muted); font-size: .9rem; }
+.feed-post { border-bottom: 1px solid #e5e7eb; padding: .8rem 0; }
+.feed-post:last-child { border-bottom: none; }
+.row { display: flex; gap: .5rem; align-items: center; flex-wrap: wrap; }
+.badge { background: var(--accent); padding: .2rem .5rem; border-radius: 999px; font-size: .8rem; }
+.chat-box { max-height: 320px; overflow: auto; border: 1px solid #e5e7eb; border-radius: 10px; padding: .6rem; background: #fdfefe; }
+.msg { margin-bottom: .5rem; }
+.msg .meta { font-size: .8rem; color: var(--muted); }
+.org { margin: .3rem 0; padding-left: .8rem; border-left: 3px solid #dbe5ff; }
