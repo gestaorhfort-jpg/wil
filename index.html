@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RH Connect - Plataforma de RH</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>RH Connect</h1>
+      <div id="session-info"></div>
+    </header>
+
+    <main>
+      <section id="auth-section" class="card">
+        <h2>Acesso</h2>
+        <div class="auth-grid">
+          <form id="login-form" class="stack">
+            <h3>Entrar</h3>
+            <label>Email <input type="email" name="email" required /></label>
+            <label>Senha <input type="password" name="password" required /></label>
+            <button type="submit">Entrar</button>
+          </form>
+
+          <form id="register-form" class="stack">
+            <h3>Cadastrar usuário</h3>
+            <label>Nome <input name="name" required /></label>
+            <label>Email <input type="email" name="email" required /></label>
+            <label>Senha <input type="password" name="password" required minlength="4" /></label>
+            <label>Cargo <input name="jobTitle" required /></label>
+            <label>Área <input name="department" required /></label>
+            <label>Humor atual
+              <select name="mood">
+                <option>😊 Motivado</option>
+                <option>😐 Neutro</option>
+                <option>😓 Sobrecarregado</option>
+              </select>
+            </label>
+            <label>Perfil
+              <select name="role">
+                <option value="colaborador">Colaborador</option>
+                <option value="gestor">Gestor</option>
+                <option value="rh">RH</option>
+              </select>
+            </label>
+            <button type="submit">Criar conta</button>
+          </form>
+        </div>
+      </section>
+
+      <section id="app-section" class="hidden">
+        <nav id="tabs"></nav>
+        <section id="view" class="card"></section>
+      </section>
+    </main>
+
+    <template id="tab-button-template">
+      <button class="tab-btn"></button>
+    </template>
+
+    <script src="app.js" type="module"></script>
+  </body>
+</html>
